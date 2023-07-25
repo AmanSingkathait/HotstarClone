@@ -9,12 +9,14 @@
     font-family: monospace;
     /* transition: all 2s linear; */
 }
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
 }
+
 body {
     width: 100%;
     -webkit-user-select: none;
@@ -39,25 +41,30 @@ body {
     display: flex;
     align-items: center;
 }
-.nav-img{
+
+.nav-img {
     height: 70px;
 }
-.nav-links{
+
+.nav-links {
     padding: 0rem 10px;
     display: flex;
     list-style: none;
 }
+
 .nav-links .Nav-items {
     padding: 0rem 10px;
     color: #fff;
     opacity: .9;
     font-weight: 500;
 }
-.rightNav{
+
+.rightNav {
     display: block;
     margin-left: auto;
 }
-.search-box{
+
+.search-box {
     border-bottom: 1px solid #aaa;
     background: transparent;
     height: 30px;
@@ -65,16 +72,19 @@ body {
     width: 250px;
     font-size: 1.8rem;
     font-weight: 500;
-    transition:all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
-.search-box::placeholder{
+
+.search-box::placeholder {
     font-size: 1.8rem;
 }
-.search-box:focus{
+
+.search-box:focus {
     width: 400px;
     border-color: #1f80e0;
 }
-.sub-btn{
+
+.sub-btn {
     background: #1f80e0;
     color: #fff;
     height: 30px;
@@ -85,9 +95,265 @@ body {
     text-transform: uppercase;
     font-weight: 600;
 }
-.login-btn{
+
+.login-btn {
     color: #fff;
     opacity: .9;
     font-size: 1.8rem;
     font-weight: 600;
+}
+
+/* header carousel container started  */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+}
+
+.carousel {
+    width: 92%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sliderinnerbox {
+    flex: 0 0 auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: 1s;
+    /* overflow: hidden; */
+}
+
+.sliderinnerbox img {
+    width: 70%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+}
+
+.slide_content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 80%, #0c111b00);
+    color: #fff;
+}
+
+.movie_title {
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-top: 80px;
+}
+
+.movie_des {
+    width: 80%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 30px;
+    opacity: .8;
+}
+
+
+
+.video-card-container {
+    position: relative;
+    width: 92%;
+    height: 16vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-card {
+    position: relative;
+    min-width: calc(100% / 5 - 10px);
+    width: calc(100% / 5 - 10px);
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #030b17;
+}
+
+.video-card-image,
+.video-card-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-card-video {
+    position: absolute;
+}
+
+.video-card:hover .video-card-image {
+    display: none;
+}
+
+/*  ---------- movies list section started ---------  */
+
+.head-title {
+    color: #fff;
+    opacity: 0.9;
+    padding-left: 4%;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.movies-list {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+
+.card-container {
+    position: relative;
+    width: 92%;
+    padding-left: 10px;
+    height: 220px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+.card{
+    position: relative;
+    min-width: 150px;
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: 5s;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card:hover .card-body{
+    opacity: 1;
+}
+.card-body{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4,8,15,8),#192133 90%);
+    padding: 10px;
+    transition: 1.5s;
+}
+.name{
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-top: 60%;
+    font-weight: 500;
+    text-align: center;
+}
+.des{
+    opacity: 0.8;
+    color: #fff;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+}
+.watchlist-btn{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: right;
+    color: rgba(255,255,255,0.5);
+    margin: 5px 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.watchlist-btn::before{
+    content: '';
+    position: relative;
+    top: 0;
+    left: -5px;
+    height: 35px;
+    width: 35px;
+    background-image: url(../Image/add.png);
+    background-size: cover;
+    transform: scale(.4);
+}
+.watchlist-btn:hover{
+    color: #fff;
+    background: rgba(255,255,255,.1);
+}
+.pre-btn,.next-btn{
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.pre-btn{
+    left: 0;
+    background:linear-gradient(to right, #0c111b 0% , #0c111b00);
+}
+.next-btn{
+    right:0;
+    background:linear-gradient(to left, #0c111b 0% , #0c111b00);
+}
+.pre-btn img,.next-btn img{
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+}
+.pre-btn:hover img , .next-btn:hover img{
+    opacity: 1;
 }
