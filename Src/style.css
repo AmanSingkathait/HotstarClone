@@ -1,3 +1,7 @@
+:root{
+    --parasize:1.6rem;
+    --headingsize:2rem;
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -6,7 +10,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    font-family: monospace;
+    font-family: cursive;
     /* transition: all 2s linear; */
 }
 
@@ -26,7 +30,7 @@ body {
     background: #0c111b;
     position: relative;
     font-family: roboto, sans-serif;
-    font-size: 1.8rem;
+    font-size: var(--parasize);
 }
 
 .navbar {
@@ -37,9 +41,10 @@ body {
     left: 0;
     padding: 0 4%;
     background-color: #0c111b;
-    z-index: 0;
+    z-index: 99;
     display: flex;
     align-items: center;
+
 }
 
 .nav-img {
@@ -70,13 +75,13 @@ body {
     height: 30px;
     color: #fff;
     width: 250px;
-    font-size: 1.8rem;
+    font-size: var(--parasize);
     font-weight: 500;
     transition: all 400ms ease-in-out;
 }
 
 .search-box::placeholder {
-    font-size: 1.8rem;
+    font-size: var(--parasize);
 }
 
 .search-box:focus {
@@ -89,18 +94,20 @@ body {
     color: #fff;
     height: 30px;
     padding: 0 12px;
-    font-size: 1.8rem;
+    font-size: var(--parasize);
     text-align: center;
     border-radius: 5px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
+    margin-right: .5rem;
 }
 
 .login-btn {
     color: #fff;
     opacity: .9;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: var(--parasize);
+    font-weight: 500;
+    margin: 0 .5rem;
 }
 
 /* header carousel container started  */
@@ -128,7 +135,7 @@ body {
 
 .swiper-slide {
     text-align: center;
-    font-size: 18px;
+    font-size: var(--parasize);
     background: #fff;
     display: flex;
     justify-content: center;
@@ -168,6 +175,7 @@ body {
     z-index: 2;
     background: linear-gradient(to right, #030b17 80%, #0c111b00);
     color: #fff;
+    text-align: left;
 }
 
 .movie_title {
@@ -228,21 +236,22 @@ body {
     opacity: 0.9;
     padding-left: 4%;
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: var(--headingsize);
     font-weight: 500;
+    margin: 1rem 0rem;
 }
 
 .movies-list {
     width: 100%;
     height: 220px;
     position: relative;
-    margin: 10px 0 20px;
+    
 }
 
 .card-container {
     position: relative;
     width: 92%;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     height: 220px;
     display: flex;
     margin: 0 auto;
@@ -250,6 +259,7 @@ body {
     overflow-x: auto;
     overflow-y: visible;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 .card{
     position: relative;
@@ -288,7 +298,7 @@ body {
     color: #fff;
     font-size: 15px;
     text-transform: capitalize;
-    margin-top: 60%;
+    margin-top: 25%;
     font-weight: 500;
     text-align: center;
 }
@@ -301,11 +311,12 @@ body {
     text-align: center;
 }
 .watchlist-btn{
+    transition: all 350ms linear;
     display: block;
     position: relative;
     width: 100%;
     text-transform: capitalize;
-    background: none;
+    background: #ffffff26;
     border: none;
     font-weight: 500;
     text-align: right;
