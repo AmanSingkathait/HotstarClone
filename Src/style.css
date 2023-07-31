@@ -1,7 +1,8 @@
-:root{
-    --parasize:1.6rem;
-    --headingsize:2rem;
+:root {
+    --parasize: 1.6rem;
+    --headingsize: 2rem;
 }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -212,6 +213,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     background: #030b17;
+    transition: all 0.5s linear;
 }
 
 .video-card-image,
@@ -245,7 +247,7 @@ body {
     width: 100%;
     height: 220px;
     position: relative;
-    
+
 }
 
 .card-container {
@@ -261,7 +263,8 @@ body {
     scroll-behavior: smooth;
     overflow: hidden;
 }
-.card{
+
+.card {
     position: relative;
     min-width: 150px;
     width: 150px;
@@ -271,18 +274,22 @@ body {
     margin-right: 10px;
     transition: 5s;
 }
-.card-img{
+
+.card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.card:hover{
+
+.card:hover {
     transform: scale(1.1);
 }
-.card:hover .card-body{
+
+.card:hover .card-body {
     opacity: 1;
 }
-.card-body{
+
+.card-body {
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -290,11 +297,12 @@ body {
     top: 0;
     left: 0;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(4,8,15,8),#192133 90%);
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 8), #192133 90%);
     padding: 10px;
     transition: 1.5s;
 }
-.name{
+
+.name {
     color: #fff;
     font-size: 15px;
     text-transform: capitalize;
@@ -302,7 +310,8 @@ body {
     font-weight: 500;
     text-align: center;
 }
-.des{
+
+.des {
     opacity: 0.8;
     color: #fff;
     margin: 5px 0;
@@ -310,7 +319,8 @@ body {
     font-size: 12px;
     text-align: center;
 }
-.watchlist-btn{
+
+.watchlist-btn {
     transition: all 350ms linear;
     display: block;
     position: relative;
@@ -320,14 +330,15 @@ body {
     border: none;
     font-weight: 500;
     text-align: right;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     margin: 5px 0;
     padding: 10px 5px;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
 }
-.watchlist-btn::before{
+
+.watchlist-btn::before {
     content: '';
     position: relative;
     top: 0;
@@ -338,11 +349,14 @@ body {
     background-size: cover;
     transform: scale(.4);
 }
-.watchlist-btn:hover{
+
+.watchlist-btn:hover {
     color: #fff;
-    background: rgba(255,255,255,.1);
+    background: rgba(255, 255, 255, .1);
 }
-.pre-btn,.next-btn{
+
+.pre-btn,
+.next-btn {
     position: absolute;
     top: 0;
     width: 5%;
@@ -352,19 +366,98 @@ body {
     cursor: pointer;
     outline: none;
 }
-.pre-btn{
+
+.pre-btn {
     left: 0;
-    background:linear-gradient(to right, #0c111b 0% , #0c111b00);
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
 }
-.next-btn{
-    right:0;
-    background:linear-gradient(to left, #0c111b 0% , #0c111b00);
+
+.next-btn {
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
 }
-.pre-btn img,.next-btn img{
+
+.pre-btn img,
+.next-btn img {
     width: 15px;
     height: 20px;
     opacity: 0;
 }
-.pre-btn:hover img , .next-btn:hover img{
+
+.pre-btn:hover img,
+.next-btn:hover img {
     opacity: 1;
 }
+
+/*  -------------- footer section started ------------- */
+.footer {
+    position: relative;
+    width: 92%;
+    height: 100%;
+    margin: 2rem auto;
+    background-color: #00000029;
+}
+
+.flexfooter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 275px));
+    justify-content: space-evenly;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    padding: 2rem 0rem;
+}
+
+.footerbox {
+    height: 100%;
+    padding: .5rem;
+}
+
+.footerbox h1 {
+    font-size: 1.6rem;
+    color: #ffffffdc;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+.footerbox p {
+    font-size: 1.5rem;
+    color: #ffffffc0;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+.footerbox img {
+    width: 40%;
+    object-fit: cover;
+}
+.socalmedia{
+    margin-bottom: 2rem;
+}
+.socalmedia span{
+    font-size: 2rem;
+    padding: .5rem;
+    margin: 0rem .5rem;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+.socalmedia span:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width:700px) {
+    
+}
+
+/* .socalmedia span:first-child:hover{
+    color: blue;
+}
+.socalmedia span:last-child:hover {
+    color: red !important;
+} */
+/* .footerbox p:last-child {
+    font-size: 0.75em;
+} 
+p:nth-last-child(2) {
+  background: red;
+}
+*/
